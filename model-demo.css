@@ -1,0 +1,20 @@
+/* CSS declarations go here */
+
+.state {
+  float: left;
+}
+
+.tasks {
+  height: 30rem;
+  width: 15rem;
+  border: 1px solid black;
+}
+
+.tasks div {
+    background: none repeat scroll 0 0 #F6F6F6;
+    border: 1px solid #CCCCCC;
+    color: #1C94C4;
+    height: 5rem;
+    margin: 1rem;
+    padding: 1rem;
+}

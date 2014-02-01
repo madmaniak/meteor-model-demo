@@ -1,0 +1,53 @@
+<head>
+  <title>model-demo</title>
+</head>
+
+<template name="body">
+  <h1>Hello Model World!</h1>
+  {{> states}}
+</template>
+
+
+<template name='states'>
+  {{> new_state}}
+  {{#each collection}}
+  {{> state}}
+  {{/each}}
+</template>
+
+<template name='state'>
+  <div class='state'>
+    <h2>State {{name}}</h2>
+    <a class='destroy'>Remove</a>
+    {{> tasks}}
+  </div>
+</template>
+
+<template name='new_state'>
+  <form class='create' model='State'>
+    <input name='name' placeholder='State'>
+    <button type='submit'>Add</button>
+  </form>
+</template>
+
+
+<template name='tasks'>
+  {{> new_task}}
+  {{#each collection}}
+  {{> task}}
+  {{/each}}
+</template>
+
+<template name='task'>
+  <div class='task' id='{{_id}}'>
+    <h3>{{title}}</h3>
+    <a class='destroy'>Remove</a>
+  </div>
+</template>
+
+<template name='new_task'>
+  <form class='create' model='Task'>
+    <input name='title' placeholder='Task'>
+    <button type='submit'>Add</button>
+  </form>
+</template>
