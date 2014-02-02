@@ -5,6 +5,8 @@ Run
 ---
 
 ```
+git clone git@github.com:madmaniak/meteor-model-demo.git
+cd meteor-model-demo
 meteor
 ```
 
